@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct UserListView: View {
+    
+    @StateObject var viewModel: UserListViewModel
+    
     var body: some View {
-        Text("User List <-")
+        BasicView(viewModel: viewModel) {
+            Text("User List <-")
+        }
     }
 }
 
 #Preview {
-    UserListView()
+    UserListView(viewModel: UserListViewModel(title: "Title", onEvent: { _ in }))
 }

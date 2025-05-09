@@ -10,5 +10,5 @@ import Foundation
 struct APIClient {
     private static let networkService = NetworkService()
     
-    static let passportRenewalClient: UserListClientProtocol = UserListClient(networkService: networkService)
+    static let userListClient: UserListClientProtocol = UserListClient(networkService: networkService)
 }

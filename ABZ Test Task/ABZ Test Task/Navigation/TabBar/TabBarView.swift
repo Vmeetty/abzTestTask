@@ -18,13 +18,13 @@ struct TabBarView: View {
     var body: some View {
         ZStack {
             TabView(selection: $viewModel.selectedTab) {
-                UserListCoordinatorView(coordinatorModel: UserListCoordinatorViewModel())
+                CoordinatorView(coordinatorModel: CoordinatorViewModel(), startScreen: .userList)
                     .onChange(of: viewModel.showTabBar, { _, newValue in
                         viewModel.showTabBar = newValue
                     })
                     .environmentObject(viewModel)
                     .tag(TabBarModel.userListTab)
-                SignUpCoordinatorView(coordinatorModel: SignUpCoordinatorViewModel())
+                CoordinatorView(coordinatorModel: CoordinatorViewModel(), startScreen: .signUp)
                     .onChange(of: viewModel.showTabBar, { _, newValue in
                         viewModel.showTabBar = newValue
                     })

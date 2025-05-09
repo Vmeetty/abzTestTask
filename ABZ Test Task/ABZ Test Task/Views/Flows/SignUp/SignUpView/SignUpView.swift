@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    @StateObject var viewModel: SignUpViewModel
+    
     var body: some View {
-        Text("Sign Up View <-")
+        BasicView(viewModel: viewModel) {
+            Text("Sign Up View <-")
+        }
     }
 }
 
 #Preview {
-    SignUpView()
+    SignUpView(viewModel: SignUpViewModel(title: "Title", onEvent: { _ in }))
 }

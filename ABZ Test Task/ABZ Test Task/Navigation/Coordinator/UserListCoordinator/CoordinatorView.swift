@@ -1,18 +1,20 @@
 //
-//  SignUpCoordinatorView.swift
+//  CoordinatorView.swift
 //  ABZ Test Task
 //
-//  Created by Vlad Chuvashov on 5/9/25.
+//  Created by Vlad Chuvashov on 1/20/25.
 //
 
 import SwiftUI
 
-struct SignUpCoordinatorView: View {
-    @StateObject var coordinatorModel: SignUpCoordinatorViewModel
+struct CoordinatorView: View {
+    
+    @StateObject var coordinatorModel: CoordinatorViewModel
+    var startScreen: Screen
     
     var body: some View {
         NavigationStack(path: $coordinatorModel.path) {
-            coordinatorModel.build(.signUp)
+            coordinatorModel.build(startScreen)
                 .navigationDestination(for: Screen.self) { screen in
                     coordinatorModel.build(screen)
                 }
@@ -20,3 +22,4 @@ struct SignUpCoordinatorView: View {
         .navigationBarBackButtonHidden()
     }
 }
+
