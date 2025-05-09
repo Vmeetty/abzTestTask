@@ -13,7 +13,23 @@ struct SignUpView: View {
     
     var body: some View {
         BasicView(viewModel: viewModel) {
-            Text("Sign Up View <-")
+            FormView()
+            
+            VStack(alignment: .leading) {
+                PositionSelectionView(selectedPosition: $viewModel.selectedPosition, positions: viewModel.positions)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding()
+            
+            CustomTextField(title: "Select photo", value: $viewModel.photo, errorMessage: viewModel.photoError)
+                .padding()
+            
+            Button("Submit") {
+                viewModel.submit = true
+            }
+        }
+        .onAppear {
+            viewModel.onAppear()
         }
     }
 }

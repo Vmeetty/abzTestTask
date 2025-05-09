@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class BasicViewModel: ObservableObject {
+class BasicViewModel: FormViewModel {
     
     @Published var title: String
     @Published var errorText = ""

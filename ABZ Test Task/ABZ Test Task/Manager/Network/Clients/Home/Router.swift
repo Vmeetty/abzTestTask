@@ -10,6 +10,7 @@ import Foundation
 // MARK: - OnboardingEndpoint
 enum Endpoint {
     case getUserList(page: String, count: String)
+    case getPositionList
 }
 
 // MARK: - OnboardingRouter
@@ -26,19 +27,24 @@ final class Router: BaseRouter {
     
     // MARK: - Public Properies
     override var path: String {
-        return "/api/v1/users"
+        switch endpoint {
+        case .getUserList(let page, let count):
+            return "/api/v1/users"
+        case .getPositionList:
+            return "/api/v1/positions"
+        }
     }
     
     override var method: HTTPMethod {
         switch endpoint {
-        case .getUserList:
+        case .getUserList, .getPositionList:
             return .get
         }
     }
     
     override var headers: [String: String]? {
         switch endpoint {
-        case .getUserList:
+        case .getUserList, .getPositionList:
             return ["accept": "application/json", "Content-Type": "application/json" ]
         }
     }
@@ -47,12 +53,14 @@ final class Router: BaseRouter {
         switch endpoint {
         case .getUserList(let page, let count):
             return queryItems(["page": page, "count": count])
+        case .getPositionList:
+            return nil
         }
     }
     
     override var body: Data? {
         switch endpoint {
-        case .getUserList:
+        case .getUserList, .getPositionList:
             return nil
         }
     }

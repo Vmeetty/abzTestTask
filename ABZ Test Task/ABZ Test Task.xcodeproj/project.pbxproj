@@ -53,6 +53,13 @@
 		8469A6232DCE35680091EED3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6222DCE35670091EED3 /* Router.swift */; };
 		8469A6252DCE418B0091EED3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6242DCE418B0091EED3 /* LoadingView.swift */; };
 		8469A6292DCE44310091EED3 /* UserItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6282DCE44310091EED3 /* UserItemRow.swift */; };
+		8469A6472DCEA4290091EED3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6462DCEA4290091EED3 /* CustomTextField.swift */; };
+		8469A64A2DCEA5C10091EED3 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6492DCEA5C10091EED3 /* FormView.swift */; };
+		8469A64C2DCEA5CD0091EED3 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A64B2DCEA5CD0091EED3 /* FormViewModel.swift */; };
+		8469A64E2DCEA80B0091EED3 /* FieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A64D2DCEA80B0091EED3 /* FieldState.swift */; };
+		8469A6502DCEAF630091EED3 /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A64F2DCEAF630091EED3 /* Positions.swift */; };
+		8469A6522DCEB3140091EED3 /* RadioButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */; };
+		8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +110,13 @@
 		8469A6222DCE35670091EED3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8469A6242DCE418B0091EED3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8469A6282DCE44310091EED3 /* UserItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemRow.swift; sourceTree = "<group>"; };
+		8469A6462DCEA4290091EED3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		8469A6492DCEA5C10091EED3 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		8469A64B2DCEA5CD0091EED3 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		8469A64D2DCEA80B0091EED3 /* FieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldState.swift; sourceTree = "<group>"; };
+		8469A64F2DCEAF630091EED3 /* Positions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
+		8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonRow.swift; sourceTree = "<group>"; };
+		8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,18 +303,19 @@
 		8469A5E72DCDEC4D0091EED3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8469A5E82DCDEC600091EED3 /* CadableModels */,
+				8469A5E82DCDEC600091EED3 /* CodableModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8469A5E82DCDEC600091EED3 /* CadableModels */ = {
+		8469A5E82DCDEC600091EED3 /* CodableModels */ = {
 			isa = PBXGroup;
 			children = (
 				8469A5F12DCDEC600091EED3 /* UserList.swift */,
 				8469A6082DCE0B940091EED3 /* Links.swift */,
+				8469A64F2DCEAF630091EED3 /* Positions.swift */,
 			);
-			path = CadableModels;
+			path = CodableModels;
 			sourceTree = "<group>";
 		};
 		8469A5FB2DCDEF160091EED3 /* Flows */ = {
@@ -332,6 +347,7 @@
 		8469A6052DCDF40B0091EED3 /* SignUpView */ = {
 			isa = PBXGroup;
 			children = (
+				8469A6482DCEA5B20091EED3 /* FormView */,
 				8469A6062DCDF41B0091EED3 /* SignUpView.swift */,
 				8469A6202DCE2FDF0091EED3 /* SignUpViewModel.swift */,
 			);
@@ -363,6 +379,9 @@
 				8469A6152DCE16100091EED3 /* HeaderView.swift */,
 				8469A6242DCE418B0091EED3 /* LoadingView.swift */,
 				8469A6282DCE44310091EED3 /* UserItemRow.swift */,
+				8469A6462DCEA4290091EED3 /* CustomTextField.swift */,
+				8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */,
+				8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -375,6 +394,16 @@
 				8469A61E2DCE2BB20091EED3 /* Event.swift */,
 			);
 			path = BasicView;
+			sourceTree = "<group>";
+		};
+		8469A6482DCEA5B20091EED3 /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				8469A6492DCEA5C10091EED3 /* FormView.swift */,
+				8469A64B2DCEA5CD0091EED3 /* FormViewModel.swift */,
+				8469A64D2DCEA80B0091EED3 /* FieldState.swift */,
+			);
+			path = FormView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,20 +495,25 @@
 				8469A59C2DCDE8480091EED3 /* TabBarModel.swift in Sources */,
 				8469A5B72DCDE9220091EED3 /* APIClient.swift in Sources */,
 				8469A5D62DCDE9E60091EED3 /* CoordinatorView.swift in Sources */,
+				8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */,
 				8469A5B82DCDE9220091EED3 /* SecureStorage.swift in Sources */,
+				8469A64E2DCEA80B0091EED3 /* FieldState.swift in Sources */,
 				8469A5E62DCDEBBC0091EED3 /* String+Extensions.swift in Sources */,
+				8469A64C2DCEA5CD0091EED3 /* FormViewModel.swift in Sources */,
 				8469A6292DCE44310091EED3 /* UserItemRow.swift in Sources */,
 				8469A5B52DCDE9220091EED3 /* TokenProvider.swift in Sources */,
 				8469A5BD2DCDE9220091EED3 /* BaseRouter.swift in Sources */,
 				8469A6072DCDF41B0091EED3 /* SignUpView.swift in Sources */,
 				8469A5B92DCDE9220091EED3 /* EmptyResponse.swift in Sources */,
 				8469A59B2DCDE8480091EED3 /* TabBarViewModel.swift in Sources */,
+				8469A6522DCEB3140091EED3 /* RadioButtonRow.swift in Sources */,
 				8469A59E2DCDE8480091EED3 /* TabBarView.swift in Sources */,
 				8469A5BC2DCDE9220091EED3 /* HTTPMethod.swift in Sources */,
 				8469A5BF2DCDE9220091EED3 /* Log.swift in Sources */,
 				8469A5E22DCDEAB60091EED3 /* UserDefaults+Extension.swift in Sources */,
 				8469A61F2DCE2BB20091EED3 /* Event.swift in Sources */,
 				8469A5D12DCDE9E60091EED3 /* Screen.swift in Sources */,
+				8469A6502DCEAF630091EED3 /* Positions.swift in Sources */,
 				8469A5B32DCDE9220091EED3 /* CodableService.swift in Sources */,
 				8469A5FA2DCDEC600091EED3 /* UserList.swift in Sources */,
 				8469A60E2DCE0F0D0091EED3 /* SplashView.swift in Sources */,
@@ -487,8 +521,10 @@
 				8469A5BE2DCDE9220091EED3 /* ErrorResponse.swift in Sources */,
 				8469A6092DCE0B940091EED3 /* Links.swift in Sources */,
 				8469A5872DCDE7700091EED3 /* ABZ_Test_TaskApp.swift in Sources */,
+				8469A6472DCEA4290091EED3 /* CustomTextField.swift in Sources */,
 				8469A5BA2DCDE9220091EED3 /* APIError.swift in Sources */,
 				8469A5DF2DCDEA730091EED3 /* Authorization.swift in Sources */,
+				8469A64A2DCEA5C10091EED3 /* FormView.swift in Sources */,
 				8469A60B2DCE0CE90091EED3 /* AppDelegate.swift in Sources */,
 				8469A5E42DCDEB3E0091EED3 /* Encodable+Extensions.swift in Sources */,
 			);
