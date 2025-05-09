@@ -9,43 +9,55 @@ import SwiftUI
 import Combine
 
 class UserListViewModel: BasicViewModel {
-    
-    // MARK: - Wrapped Properties
-    @Published var users: Users?
-    
-    // MARK: - Properties
+
+    @Published var users: UserItems = []
+
     private var subscriptions = Set<AnyCancellable>()
-    
-    // MARK: - Public funcs
-    func onAppear() {
+    private var page = "1"
+    private var canLoadMore = true
+    private var isLoadingPage = false
+
+    func fetchUsers() {
+        guard !isLoadingPage, canLoadMore else { return }
+        isLoadingPage = true
         getUserList()
     }
-   
-    // MARK: - Private funcs
+
     private func getUserList() {
-        isLoading = true
-        APIClient.userListClient.getUserList(page: "2", count: "10")
+        APIClient.userListClient.getUserList(page: page, count: "6")
             .sink { [weak self] in
+                guard let self else { return }
+                self.isLoadingPage = false
+
                 switch $0 {
                 case .failure(let error):
-                    self?.errorText = error.localizedDescription
-                    self?.showingError = true
-                    self?.isLoading = false
+                    self.errorText = error.localizedDescription
+                    self.showingError = true
                 case .finished:
                     break
                 }
             } receiveValue: { [weak self] data in
-                guard let self = self else {
-                    return
+                guard let self else { return }
+
+                self.users.append(contentsOf: data.users)
+
+                if let nextUrl = data.links.nextUrl,
+                   let nextPage = getPageValue(from: nextUrl) {
+                    self.page = nextPage
+                } else {
+                    self.canLoadMore = false
                 }
-                
-                self.users = data
-                
-                self.isLoading = false
             }
             .store(in: &subscriptions)
-
     }
-    
-    
+
+    private func getPageValue(from urlString: String) -> String? {
+        guard let url = URL(string: urlString),
+              let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+              let queryItems = components.queryItems else {
+            return nil
+        }
+
+        return queryItems.first(where: { $0.name == "page" })?.value
+    }
 }

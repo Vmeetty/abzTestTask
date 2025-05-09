@@ -36,12 +36,12 @@ struct UserItem: Codable, Identifiable, Equatable {
     
     let id: Int
     let name: String
-    let email: String
-    let phone: String
+    let email: String?
+    let phone: String?
     let position: String
     let positionId: Int
     let registrationTimestamp: Int
-    let photo: String
+    let photo: String?
     
     enum CodingKeys: String, CodingKey {
         case id

@@ -13,10 +13,27 @@ struct UserListView: View {
     
     var body: some View {
         BasicView(viewModel: viewModel) {
-            Text("User List <-")
+            LazyVStack(spacing: 16) {
+                ForEach(Array(viewModel.users), id: \.id) { user in
+                    UserItemRow(user: user)
+                        .onAppear {
+                            if user == viewModel.users.last {
+                                viewModel.fetchUsers()
+                            }
+                        }
+                }
+                
+                if viewModel.isLoading {
+                    ProgressView()
+                        .padding(.top, 8)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+            }
         }
         .onAppear {
-            viewModel.onAppear()
+            if viewModel.users.isEmpty {
+                viewModel.fetchUsers()
+            }
         }
     }
 }
