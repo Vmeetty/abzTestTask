@@ -15,6 +15,9 @@ struct UserListView: View {
         BasicView(viewModel: viewModel) {
             Text("User List <-")
         }
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 

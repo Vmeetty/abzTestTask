@@ -50,6 +50,7 @@
 		8469A61D2DCE2B820091EED3 /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A61C2DCE2B820091EED3 /* BasicViewModel.swift */; };
 		8469A61F2DCE2BB20091EED3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A61E2DCE2BB20091EED3 /* Event.swift */; };
 		8469A6212DCE2FDF0091EED3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6202DCE2FDF0091EED3 /* SignUpViewModel.swift */; };
+		8469A6232DCE35680091EED3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6222DCE35670091EED3 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		8469A61C2DCE2B820091EED3 /* BasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
 		8469A61E2DCE2BB20091EED3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8469A6202DCE2FDF0091EED3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		8469A6222DCE35670091EED3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				8469A5A72DCDE9210091EED3 /* UserListClient.swift */,
+				8469A6222DCE35670091EED3 /* Router.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8469A6232DCE35680091EED3 /* Router.swift in Sources */,
 				8469A61B2DCE2B720091EED3 /* BasicView.swift in Sources */,
 				8469A5892DCDE7700091EED3 /* ContentView.swift in Sources */,
 				8469A6182DCE17130091EED3 /* UserListViewModel.swift in Sources */,

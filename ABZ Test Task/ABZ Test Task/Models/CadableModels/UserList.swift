@@ -9,10 +9,10 @@ import Foundation
 
 struct Users: Codable {
     let success: Bool
-    let totalPages: String
-    let totalUsers: String
-    let count: String
-    let page: String
+    let totalPages: Int
+    let totalUsers: Int
+    let count: Int
+    let page: Int
     let links: Links
     let users: UserItems
     
@@ -34,13 +34,13 @@ struct UserItem: Codable, Identifiable, Equatable {
         return true
     }
     
-    let id: String
+    let id: Int
     let name: String
     let email: String
     let phone: String
     let position: String
-    let positionId: String
-    let registrationTimestamp: String
+    let positionId: Int
+    let registrationTimestamp: Int
     let photo: String
     
     enum CodingKeys: String, CodingKey {

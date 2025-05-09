@@ -13,7 +13,7 @@ enum BaseException: Error {
 
 class BaseRouter {
     var baseUrl: String {
-        "https://frontend-test-assignment-api.abz.agency/api/v1"
+        "https://frontend-test-assignment-api.abz.agency"
     }
     
     var method: HTTPMethod {

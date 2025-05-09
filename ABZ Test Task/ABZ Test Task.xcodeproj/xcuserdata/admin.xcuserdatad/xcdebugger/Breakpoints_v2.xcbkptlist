@@ -7,47 +7,152 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E9689AEB-3B03-4C38-9AD0-F93865261FE7"
+            uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ABZ Test Task/Navigation/Coordinator/UserListCoordinator/CoordinatorViewModel.swift"
+            filePath = "ABZ Test Task/Views/Flows/UserListView/UserListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "build(_:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getUserList()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E9689AEB-3B03-4C38-9AD0-F93865261FE7 - e9a5ceb1c21ac59"
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "ABZ_Test_Task.CoordinatorViewModel.build(ABZ_Test_Task.Screen) -&gt; some"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
                   moduleName = "ABZ Test Task"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Navigation/Coordinator/UserListCoordinator/CoordinatorViewModel.swift"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "124">
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "584">
                </Location>
                <Location
-                  uuid = "E9689AEB-3B03-4C38-9AD0-F93865261FE7 - f3a04066135ed827"
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (ABZ_Test_Task.Event) -&gt; () in implicit closure #1 () -&gt; ABZ_Test_Task.UserListViewModel in ABZ_Test_Task.CoordinatorViewModel.build(ABZ_Test_Task.Screen) -&gt; some"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
                   moduleName = "ABZ Test Task"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Navigation/Coordinator/UserListCoordinator/CoordinatorViewModel.swift"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "28">
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "FB0B0E7D-B539-4AC9-9C6B-9126150BD3A3 - d3b03f4fa8f67c1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.Users) -&gt; () in ABZ_Test_Task.UserListViewModel.getUserList() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/UserListView/UserListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "472">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,65 +160,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "15F8949B-51A8-49A5-AA4C-2885A408F9A7"
+            uuid = "55E5B623-FF76-4394-88E6-2F037ACCF406"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ABZ Test Task/Navigation/Coordinator/UserListCoordinator/CoordinatorViewModel.swift"
+            filePath = "ABZ Test Task/Views/Flows/UserListView/UserListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "build(_:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getUserList()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "15F8949B-51A8-49A5-AA4C-2885A408F9A7 - e9a5ceb1c21adbe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ABZ_Test_Task.CoordinatorViewModel.build(ABZ_Test_Task.Screen) -&gt; some"
-                  moduleName = "ABZ Test Task"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Navigation/Coordinator/UserListCoordinator/CoordinatorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "456">
-               </Location>
-               <Location
-                  uuid = "15F8949B-51A8-49A5-AA4C-2885A408F9A7 - 549b2363970f4b80"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (ABZ_Test_Task.Event) -&gt; () in implicit closure #2 () -&gt; ABZ_Test_Task.SignUpViewModel in ABZ_Test_Task.CoordinatorViewModel.build(ABZ_Test_Task.Screen) -&gt; some"
-                  moduleName = "ABZ Test Task"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Navigation/Coordinator/UserListCoordinator/CoordinatorViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E66C9F5-ACA3-49ED-B3E6-B4593540EC49"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ABZ Test Task/Views/Flows/UserListView/UserListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "body"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
