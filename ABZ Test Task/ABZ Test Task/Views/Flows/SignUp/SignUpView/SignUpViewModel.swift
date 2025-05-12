@@ -22,16 +22,29 @@ class SignUpViewModel: BasicViewModel {
     @Published var isEmailValid = false
     @Published var isPhoneValid = false
     
+    @Published var selectedPhoto: UIImage? = nil
+    @Published var isPhotoPickerPresented = false
+    @Published var showPhotoSourceSheet = false
+    @Published var photoSource: PhotoPicker.SourceType = .photoLibrary
+    
     // MARK: - Properties
     private var subscriptions = Set<AnyCancellable>()
+    
+    var isPhotoValid: Bool {
+        selectedPhoto != nil
+    }
+    
+    var photoErrorText: String? {
+        isPhotoValid ? nil : "Photo is required"
+    }
+    
+    var isFormValid: Bool {
+        isNameValid && isEmailValid && isPhoneValid && selectedPosition != nil && isPhotoValid
+    }
     
     // MARK: - Public funcs
     func onAppear() {
         getPostionList()
-    }
-    
-    var isFormValid: Bool {
-        isNameValid && isEmailValid && isPhoneValid && selectedPosition != nil
     }
     
     func validateName(_ text: String) -> String? {
@@ -44,6 +57,19 @@ class SignUpViewModel: BasicViewModel {
 
     func validatePhone(_ text: String) -> String? {
         text.isValidPhone ? nil : "Format: +38 (XXX) XXX - XX - XX"
+    }
+    
+    func pickPhoto() {
+        showPhotoSourceSheet = true
+    }
+    
+    func selectSource(_ source: PhotoPicker.SourceType) {
+        photoSource = source
+        isPhotoPickerPresented = true
+    }
+    
+    func removePhoto() {
+        selectedPhoto = nil
     }
     
     // MARK: - Private funcs

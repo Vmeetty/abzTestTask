@@ -46,6 +46,24 @@ struct SignUpView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             
+            PhotoUploadField(
+                label: "Upload your photo",
+                errorText: viewModel.photoErrorText,
+                isValid: viewModel.isPhotoValid,
+                hasPhoto: viewModel.selectedPhoto != nil,
+                onUpload: viewModel.pickPhoto,
+                onRemove: viewModel.removePhoto
+            )
+            .padding(.horizontal)
+            
+            if let image = viewModel.selectedPhoto {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 150)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            
             Button("Submit") {
                 print("Form submitted!")
             }
@@ -53,6 +71,18 @@ struct SignUpView: View {
         }
         .onAppear {
             viewModel.onAppear()
+        }
+        .confirmationDialog("Choose how you want to add a photo", isPresented: $viewModel.showPhotoSourceSheet, titleVisibility: .visible) {
+            Button("Camera") {
+                viewModel.selectSource(.camera)
+            }
+            Button("Gallery") {
+                viewModel.selectSource(.photoLibrary)
+            }
+            Button("Cancel", role: .cancel) {}
+        }
+        .fullScreenCover(isPresented: $viewModel.isPhotoPickerPresented) {
+            PhotoPicker(selectedImage: $viewModel.selectedPhoto, sourceType: viewModel.photoSource)
         }
     }
 }

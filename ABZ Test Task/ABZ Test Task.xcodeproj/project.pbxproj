@@ -57,6 +57,8 @@
 		8469A6502DCEAF630091EED3 /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A64F2DCEAF630091EED3 /* Positions.swift */; };
 		8469A6522DCEB3140091EED3 /* RadioButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */; };
 		8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */; };
+		8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */; };
+		8478A3E02DD1EACA00B167DA /* PhotoUploadField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3DF2DD1EACA00B167DA /* PhotoUploadField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +113,8 @@
 		8469A64F2DCEAF630091EED3 /* Positions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
 		8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonRow.swift; sourceTree = "<group>"; };
 		8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSelectionView.swift; sourceTree = "<group>"; };
+		8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		8478A3DF2DD1EACA00B167DA /* PhotoUploadField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		8469A5852DCDE7700091EED3 /* ABZ Test Task */ = {
 			isa = PBXGroup;
 			children = (
+				8469A65B2DD1E4F40091EED3 /* Helpers */,
 				8469A6142DCE15F40091EED3 /* Components */,
 				8469A60C2DCE0EE60091EED3 /* Views */,
 				8469A5E72DCDEC4D0091EED3 /* Models */,
@@ -375,6 +380,7 @@
 				8469A6462DCEA4290091EED3 /* CustomTextField.swift */,
 				8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */,
 				8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */,
+				8478A3DF2DD1EACA00B167DA /* PhotoUploadField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -387,6 +393,14 @@
 				8469A61E2DCE2BB20091EED3 /* Event.swift */,
 			);
 			path = BasicView;
+			sourceTree = "<group>";
+		};
+		8469A65B2DD1E4F40091EED3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +482,7 @@
 				8469A6252DCE418B0091EED3 /* LoadingView.swift in Sources */,
 				8469A6112DCE10420091EED3 /* SplashViewModel.swift in Sources */,
 				8469A5B42DCDE9220091EED3 /* NetworkService.swift in Sources */,
+				8478A3E02DD1EACA00B167DA /* PhotoUploadField.swift in Sources */,
 				8469A6162DCE16100091EED3 /* HeaderView.swift in Sources */,
 				8469A5FE2DCDEF780091EED3 /* UserListView.swift in Sources */,
 				8469A5BB2DCDE9220091EED3 /* APIErrorCode.swift in Sources */,
@@ -497,6 +512,7 @@
 				8469A6502DCEAF630091EED3 /* Positions.swift in Sources */,
 				8469A5B32DCDE9220091EED3 /* CodableService.swift in Sources */,
 				8469A5FA2DCDEC600091EED3 /* UserList.swift in Sources */,
+				8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */,
 				8469A60E2DCE0F0D0091EED3 /* SplashView.swift in Sources */,
 				8469A6212DCE2FDF0091EED3 /* SignUpViewModel.swift in Sources */,
 				8469A5BE2DCDE9220091EED3 /* ErrorResponse.swift in Sources */,
