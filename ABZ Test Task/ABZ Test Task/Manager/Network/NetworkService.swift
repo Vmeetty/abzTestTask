@@ -22,9 +22,7 @@ final class NetworkService {
     
     // MARK: - Constant
     private enum Constant {
-        static let authorizationKey = "Authorization"
-        static let bearerPrefix = "Bearer "
-        static let basicAuth = "Basic Auth "
+        static let authorizationKey = "Token"
     }
 
     // MARK: - Private Properies
@@ -60,11 +58,11 @@ final class NetworkService {
                                       isAthorizedRequired: Bool = false) -> AnyPublisher<T, Error> {
         let authorization = UserDefaults.standard.authorization
 
-        guard !(isAthorizedRequired && authorization?.accessToken == nil) else {
+        guard !(isAthorizedRequired && authorization?.token == nil) else {
             return Fail(error: APIError.unathorized).eraseToAnyPublisher()
         }
 
-        return performRequest(session: session ?? mainSession, route: route, token: isAthorizedRequired ? authorization?.accessToken : nil)
+        return performRequest(session: session ?? mainSession, route: route, token: isAthorizedRequired ? authorization?.token : nil)
     }
 
     // MARK: - Private Methods
@@ -73,7 +71,7 @@ final class NetworkService {
             var request = try route.asURLRequest()
 
             if let token = token {
-                request.setValue(Constant.bearerPrefix + token, forHTTPHeaderField: Constant.authorizationKey)
+                request.setValue(token, forHTTPHeaderField: Constant.authorizationKey)
             }
             
             logRequest(request: request)
@@ -104,12 +102,31 @@ final class NetworkService {
             return Just(EmptyResponse().data!)
                 .decode(type: T.self, decoder: CodableService.defaultDecoder)
                 .eraseToAnyPublisher()
+        case .some(401):
+            return refreshToken()
+                .mapError { [self] (error: Error) -> Error in
+                    refreshSemaphore.signal()
+                    return error
+                }
+                .flatMap { [self] (response: Authorization) -> AnyPublisher<T, Error> in
+                    UserDefaults.standard.setAuthorization(response)
+                    tokenProvider.accessToken = response.token
+                    refreshSemaphore.signal()
+                    return performRequest(session: session, route: route, token: response.token)
+                }
+                .eraseToAnyPublisher()
         default:
             return Just(output.data)
                 .decode(type: ErrorResponse.self, decoder: CodableService.snakeDecoder)
                 .flatMap { Fail(error: $0.apiError) }
                 .eraseToAnyPublisher()
         }
+    }
+    
+    private func refreshToken() -> AnyPublisher<Authorization, Error> {
+        refreshSemaphore.wait()
+        refreshSemaphore.signal()
+        return APIClient.onboardingClient.getToken()
     }
 }
 

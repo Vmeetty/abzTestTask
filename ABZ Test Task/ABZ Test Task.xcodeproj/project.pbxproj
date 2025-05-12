@@ -59,6 +59,13 @@
 		8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */; };
 		8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */; };
 		8478A3E02DD1EACA00B167DA /* PhotoUploadField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3DF2DD1EACA00B167DA /* PhotoUploadField.swift */; };
+		8478A3E22DD1F72300B167DA /* UploadDataWithFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3E12DD1F72300B167DA /* UploadDataWithFile.swift */; };
+		8478A3E42DD1F77500B167DA /* NSMutableData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3E32DD1F77500B167DA /* NSMutableData+Extension.swift */; };
+		8478A3E62DD1FC3900B167DA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3E52DD1FC3900B167DA /* UserData.swift */; };
+		8478A3E82DD2008200B167DA /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3E72DD2008200B167DA /* RegisterResult.swift */; };
+		8478A3EB2DD2045400B167DA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3EA2DD2045400B167DA /* OnboardingRouter.swift */; };
+		8478A3ED2DD2070A00B167DA /* OnboardingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3EC2DD2070A00B167DA /* OnboardingClient.swift */; };
+		8478A3EF2DD2248E00B167DA /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3EE2DD2248E00B167DA /* Data+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +122,13 @@
 		8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSelectionView.swift; sourceTree = "<group>"; };
 		8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		8478A3DF2DD1EACA00B167DA /* PhotoUploadField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadField.swift; sourceTree = "<group>"; };
+		8478A3E12DD1F72300B167DA /* UploadDataWithFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataWithFile.swift; sourceTree = "<group>"; };
+		8478A3E32DD1F77500B167DA /* NSMutableData+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Extension.swift"; sourceTree = "<group>"; };
+		8478A3E52DD1FC3900B167DA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		8478A3E72DD2008200B167DA /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
+		8478A3EA2DD2045400B167DA /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		8478A3EC2DD2070A00B167DA /* OnboardingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingClient.swift; sourceTree = "<group>"; };
+		8478A3EE2DD2248E00B167DA /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +238,7 @@
 			children = (
 				8469A5A52DCDE9210091EED3 /* Clients */,
 				8469A5A22DCDE9210091EED3 /* CodableService.swift */,
+				8478A3E12DD1F72300B167DA /* UploadDataWithFile.swift */,
 				8469A5AA2DCDE9220091EED3 /* Models */,
 				8469A5A32DCDE9210091EED3 /* NetworkService.swift */,
 				8469A5A92DCDE9210091EED3 /* SecureStorage.swift */,
@@ -236,6 +251,7 @@
 		8469A5A52DCDE9210091EED3 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				8478A3E92DD2044200B167DA /* OnboardingRouter */,
 				8469A5A62DCDE9210091EED3 /* Home */,
 				8469A5A82DCDE9210091EED3 /* APIClient.swift */,
 			);
@@ -295,6 +311,8 @@
 				8469A5E32DCDEB3E0091EED3 /* Encodable+Extensions.swift */,
 				8469A5E12DCDEAB60091EED3 /* UserDefaults+Extension.swift */,
 				8469A5E52DCDEBBC0091EED3 /* String+Extensions.swift */,
+				8478A3E32DD1F77500B167DA /* NSMutableData+Extension.swift */,
+				8478A3EE2DD2248E00B167DA /* Data+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +331,8 @@
 				8469A5F12DCDEC600091EED3 /* UserList.swift */,
 				8469A6082DCE0B940091EED3 /* Links.swift */,
 				8469A64F2DCEAF630091EED3 /* Positions.swift */,
+				8478A3E52DD1FC3900B167DA /* UserData.swift */,
+				8478A3E72DD2008200B167DA /* RegisterResult.swift */,
 			);
 			path = CodableModels;
 			sourceTree = "<group>";
@@ -403,6 +423,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		8478A3E92DD2044200B167DA /* OnboardingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				8478A3EA2DD2045400B167DA /* OnboardingRouter.swift */,
+				8478A3EC2DD2070A00B167DA /* OnboardingClient.swift */,
+			);
+			path = OnboardingRouter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8469A6232DCE35680091EED3 /* Router.swift in Sources */,
+				8478A3EF2DD2248E00B167DA /* Data+Extension.swift in Sources */,
 				8469A61B2DCE2B720091EED3 /* BasicView.swift in Sources */,
 				8469A5892DCDE7700091EED3 /* ContentView.swift in Sources */,
 				8469A6182DCE17130091EED3 /* UserListViewModel.swift in Sources */,
@@ -483,6 +513,7 @@
 				8469A6112DCE10420091EED3 /* SplashViewModel.swift in Sources */,
 				8469A5B42DCDE9220091EED3 /* NetworkService.swift in Sources */,
 				8478A3E02DD1EACA00B167DA /* PhotoUploadField.swift in Sources */,
+				8478A3E22DD1F72300B167DA /* UploadDataWithFile.swift in Sources */,
 				8469A6162DCE16100091EED3 /* HeaderView.swift in Sources */,
 				8469A5FE2DCDEF780091EED3 /* UserListView.swift in Sources */,
 				8469A5BB2DCDE9220091EED3 /* APIErrorCode.swift in Sources */,
@@ -492,6 +523,7 @@
 				8469A61D2DCE2B820091EED3 /* BasicViewModel.swift in Sources */,
 				8469A59C2DCDE8480091EED3 /* TabBarModel.swift in Sources */,
 				8469A5B72DCDE9220091EED3 /* APIClient.swift in Sources */,
+				8478A3ED2DD2070A00B167DA /* OnboardingClient.swift in Sources */,
 				8469A5D62DCDE9E60091EED3 /* CoordinatorView.swift in Sources */,
 				8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */,
 				8469A5B82DCDE9220091EED3 /* SecureStorage.swift in Sources */,
@@ -499,6 +531,7 @@
 				8469A6292DCE44310091EED3 /* UserItemRow.swift in Sources */,
 				8469A5B52DCDE9220091EED3 /* TokenProvider.swift in Sources */,
 				8469A5BD2DCDE9220091EED3 /* BaseRouter.swift in Sources */,
+				8478A3E62DD1FC3900B167DA /* UserData.swift in Sources */,
 				8469A6072DCDF41B0091EED3 /* SignUpView.swift in Sources */,
 				8469A5B92DCDE9220091EED3 /* EmptyResponse.swift in Sources */,
 				8469A59B2DCDE8480091EED3 /* TabBarViewModel.swift in Sources */,
@@ -509,15 +542,18 @@
 				8469A5E22DCDEAB60091EED3 /* UserDefaults+Extension.swift in Sources */,
 				8469A61F2DCE2BB20091EED3 /* Event.swift in Sources */,
 				8469A5D12DCDE9E60091EED3 /* Screen.swift in Sources */,
+				8478A3EB2DD2045400B167DA /* OnboardingRouter.swift in Sources */,
 				8469A6502DCEAF630091EED3 /* Positions.swift in Sources */,
 				8469A5B32DCDE9220091EED3 /* CodableService.swift in Sources */,
 				8469A5FA2DCDEC600091EED3 /* UserList.swift in Sources */,
 				8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */,
 				8469A60E2DCE0F0D0091EED3 /* SplashView.swift in Sources */,
+				8478A3E82DD2008200B167DA /* RegisterResult.swift in Sources */,
 				8469A6212DCE2FDF0091EED3 /* SignUpViewModel.swift in Sources */,
 				8469A5BE2DCDE9220091EED3 /* ErrorResponse.swift in Sources */,
 				8469A6092DCE0B940091EED3 /* Links.swift in Sources */,
 				8469A5872DCDE7700091EED3 /* ABZ_Test_TaskApp.swift in Sources */,
+				8478A3E42DD1F77500B167DA /* NSMutableData+Extension.swift in Sources */,
 				8469A6472DCEA4290091EED3 /* CustomTextField.swift in Sources */,
 				8469A5BA2DCDE9220091EED3 /* APIError.swift in Sources */,
 				8469A5DF2DCDEA730091EED3 /* Authorization.swift in Sources */,

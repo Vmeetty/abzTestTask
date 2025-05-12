@@ -32,7 +32,7 @@ struct SignUpView: View {
                 
                 CustomTextField(
                     label: "Phone",
-                    supportingText: "Format: +38 (XXX) XXX - XX - XX",
+                    supportingText: "Format: +380 (XX) XXX - XX - XX",
                     validator: viewModel.validatePhone(_:),
                     text: $viewModel.phone,
                     isValid: $viewModel.isPhoneValid
@@ -66,6 +66,7 @@ struct SignUpView: View {
             
             Button("Submit") {
                 print("Form submitted!")
+                viewModel.onSubmit()
             }
             .disabled(!viewModel.isFormValid)
         }

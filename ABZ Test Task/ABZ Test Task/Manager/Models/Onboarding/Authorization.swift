@@ -9,8 +9,5 @@ import Foundation
 
 // MARK: - Authorization
 struct Authorization: Codable {
-    let expiration: Int?
-    let accessToken: String
-    let refreshToken: String?
-    let userId: String?
+    let token: String
 }

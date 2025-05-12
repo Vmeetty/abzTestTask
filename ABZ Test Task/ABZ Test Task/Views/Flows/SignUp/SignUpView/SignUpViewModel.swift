@@ -26,17 +26,18 @@ class SignUpViewModel: BasicViewModel {
     @Published var isPhotoPickerPresented = false
     @Published var showPhotoSourceSheet = false
     @Published var photoSource: PhotoPicker.SourceType = .photoLibrary
+    @Published var photoErrorText: String? = nil
     
     // MARK: - Properties
     private var subscriptions = Set<AnyCancellable>()
     
     var isPhotoValid: Bool {
-        selectedPhoto != nil
+        selectedPhoto != nil && photoErrorText == nil
     }
     
-    var photoErrorText: String? {
-        isPhotoValid ? nil : "Photo is required"
-    }
+//    var photoErrorText: String? {
+//        isPhotoValid ? nil : "Photo is required"
+//    }
     
     var isFormValid: Bool {
         isNameValid && isEmailValid && isPhoneValid && selectedPosition != nil && isPhotoValid
@@ -45,6 +46,10 @@ class SignUpViewModel: BasicViewModel {
     // MARK: - Public funcs
     func onAppear() {
         getPostionList()
+    }
+    
+    func onSubmit() {
+        registerUser()
     }
     
     func validateName(_ text: String) -> String? {
@@ -56,7 +61,7 @@ class SignUpViewModel: BasicViewModel {
     }
 
     func validatePhone(_ text: String) -> String? {
-        text.isValidPhone ? nil : "Format: +38 (XXX) XXX - XX - XX"
+        text.isValidPhone ? nil : "Format: +380 (XX) XXX - XX - XX"
     }
     
     func pickPhoto() {
@@ -83,17 +88,88 @@ class SignUpViewModel: BasicViewModel {
                 case .failure(let error):
                     self.errorText = error.localizedDescription
                     self.showingError = true
+                    self.isLoading = false
+                case .finished:
+                    break
+                }
+            } receiveValue: { [weak self] data in
+//                guard let self else { return }
+                self?.positions = data.positions
+                self?.isLoading = false
+//                DispatchQueue.main.async {
+//                }
+            }
+            .store(in: &subscriptions)
+
+    }
+    
+    private func registerUser() {
+        isLoading = true
+        guard let image = selectedPhoto else {
+            errorText = "Failed to load user image"
+            showingError = true
+            isLoading = false
+            return
+        }
+        
+        guard image.size.width >= 70, image.size.height >= 70 else {
+            photoErrorText = "Image must be at least 70x70 pixels"
+            showingError = true
+            isLoading = false
+            return
+        }
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.9) else {
+            photoErrorText = "Photo must be in JPEG format"
+            showingError = true
+            isLoading = false
+            return
+        }
+        
+        let maxBytes = 5 * 1024 * 1024
+        guard imageData.count <= maxBytes else {
+            photoErrorText = "Photo must not exceed 5 MB"
+            showingError = true
+            isLoading = false
+            return
+        }
+        
+        guard let positionId = selectedPosition?.id else {
+            photoErrorText = "Please select a position"
+            showingError = true
+            isLoading = false
+            return
+        }
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+            return
+        }
+        
+        guard let positionId = selectedPosition?.id else {
+            return
+        }
+        
+        let userData = UserData(name: username, email: email, phone: phone, position_id: positionId)
+        let uploadData = UploadDataWithFile(userData: userData, imageName: "userPhoto9090", imageData: imageData)
+        
+        APIClient.userListClient.registerUser(data: uploadData)
+            .sink { [weak self] in
+                guard let self else { return }
+
+                switch $0 {
+                case .failure(let error):
+                    self.errorText = error.localizedDescription
+                    self.showingError = true
+                    self.isLoading = false
                 case .finished:
                     break
                 }
             } receiveValue: { [weak self] data in
                 guard let self else { return }
-                DispatchQueue.main.async {
-                    self.positions = data.positions
-                }
+                
+                print(data)
             }
             .store(in: &subscriptions)
-
     }
     
 }

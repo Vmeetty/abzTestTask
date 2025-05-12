@@ -11,6 +11,7 @@ import Foundation
 enum Endpoint {
     case getUserList(page: String, count: String)
     case getPositionList
+    case registerUser(data: UploadDataWithFile)
 }
 
 // MARK: - OnboardingRouter
@@ -28,10 +29,12 @@ final class Router: BaseRouter {
     // MARK: - Public Properies
     override var path: String {
         switch endpoint {
-        case .getUserList(let page, let count):
+        case .getUserList:
             return "/api/v1/users"
         case .getPositionList:
             return "/api/v1/positions"
+        case .registerUser:
+            return "/api/v1/users"
         }
     }
     
@@ -39,13 +42,17 @@ final class Router: BaseRouter {
         switch endpoint {
         case .getUserList, .getPositionList:
             return .get
+        case .registerUser:
+            return .post
         }
     }
     
     override var headers: [String: String]? {
         switch endpoint {
         case .getUserList, .getPositionList:
-            return ["accept": "application/json", "Content-Type": "application/json" ]
+            return ["accept": "application/json", "Content-Type": "application/json"]
+        case .registerUser(let data):
+            return ["accept": "application/json", "Content-Type": "multipart/form-data; boundary=\(data.boundary)"]
         }
     }
     
@@ -53,7 +60,7 @@ final class Router: BaseRouter {
         switch endpoint {
         case .getUserList(let page, let count):
             return queryItems(["page": page, "count": count])
-        case .getPositionList:
+        case .getPositionList, .registerUser:
             return nil
         }
     }
@@ -62,6 +69,8 @@ final class Router: BaseRouter {
         switch endpoint {
         case .getUserList, .getPositionList:
             return nil
+        case .registerUser(let data):
+            return data.multipartBodyWithPhoto
         }
     }
     

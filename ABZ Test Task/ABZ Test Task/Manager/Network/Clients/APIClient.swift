@@ -10,5 +10,6 @@ import Foundation
 struct APIClient {
     private static let networkService = NetworkService()
     
+    static let onboardingClient: OnboardingClientProtocol = OnboardingClient(networkService: networkService)
     static let userListClient: UserListClientProtocol = UserListClient(networkService: networkService)
 }

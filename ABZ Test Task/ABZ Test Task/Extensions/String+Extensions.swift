@@ -11,6 +11,10 @@ extension String {
     static var empty: String {
         String()
     }
+    
+    var deletingPathExtension: String {
+        return NSString(string: self).deletingPathExtension
+    }
 }
 
 extension String {
@@ -25,7 +29,7 @@ extension String {
     }
     
     var isValidPhone: Bool {
-        let regex = #"^\+38 \(\d{3}\) \d{3} - \d{2} - \d{2}$"#
+        let regex = #"^\+380 \(\d{2}\) \d{3} - \d{2} - \d{2}$"#
         return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: self)
     }
 }
