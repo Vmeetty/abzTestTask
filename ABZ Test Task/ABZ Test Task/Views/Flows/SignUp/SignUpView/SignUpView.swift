@@ -13,7 +13,32 @@ struct SignUpView: View {
     
     var body: some View {
         BasicView(viewModel: viewModel) {
-            FormView()
+            Group {
+                CustomTextField(
+                    label: "Name",
+                    supportingText: "Enter your name",
+                    validator: viewModel.validateName(_:),
+                    text: $viewModel.username,
+                    isValid: $viewModel.isNameValid
+                )
+                
+                CustomTextField(
+                    label: "Email",
+                    supportingText: "Enter your email",
+                    validator: viewModel.validateEmail(_:),
+                    text: $viewModel.email,
+                    isValid: $viewModel.isEmailValid
+                )
+                
+                CustomTextField(
+                    label: "Phone",
+                    supportingText: "Format: +38 (XXX) XXX - XX - XX",
+                    validator: viewModel.validatePhone(_:),
+                    text: $viewModel.phone,
+                    isValid: $viewModel.isPhoneValid
+                )
+            }
+            .padding(.horizontal)
             
             VStack(alignment: .leading) {
                 PositionSelectionView(selectedPosition: $viewModel.selectedPosition, positions: viewModel.positions)
@@ -21,12 +46,10 @@ struct SignUpView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             
-            CustomTextField(title: "Select photo", value: $viewModel.photo, errorMessage: viewModel.photoError)
-                .padding()
-            
             Button("Submit") {
-                viewModel.submit = true
+                print("Form submitted!")
             }
+            .disabled(!viewModel.isFormValid)
         }
         .onAppear {
             viewModel.onAppear()
