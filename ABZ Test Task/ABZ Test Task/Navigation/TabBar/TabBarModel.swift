@@ -15,9 +15,18 @@ enum TabBarModel: String, CaseIterable {
     var imageValue: String {
         switch self {
         case .userListTab:
-            return "clock"
+            return "person.3.sequence.fill"
         case .signUpTab:
            return "person.crop.circle.fill.badge.plus"
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .userListTab:
+            return "Users"
+        case .signUpTab:
+            return "Sign up"
         }
     }
 }

@@ -16,9 +16,11 @@ struct CustomTabBar: View {
             HStack {
                 ForEach(TabBarModel.allCases, id: \.rawValue) { tab in
                     Spacer()
-                    Image(systemName: tab.imageValue)
-                        .foregroundColor(.white)
-                        .scaleEffect(tab == selectedTab ? 1.15 : 1.0)
+                    HStack {
+                        Image(systemName: tab.imageValue)
+                        Text(tab.title)
+                    }
+                    .foregroundColor(tab == selectedTab ? Color("SecondaryColor") : Color("StrongGrayColor"))
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 0.1)) {
                                 selectedTab = tab
@@ -28,7 +30,7 @@ struct CustomTabBar: View {
                 }
             }
             .frame(width: nil, height: 70)
-            .background(.black)
+            .background(Color("SecondaryGrayColor"))
         }
     
     }
