@@ -70,6 +70,10 @@
 		849CBC122DD32E2F0079FE57 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC112DD32E2F0079FE57 /* CustomButton.swift */; };
 		849CBC142DD32E620079FE57 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */; };
 		849CBC162DD353C30079FE57 /* UIApplication+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */; };
+		849CBC192DD35DF20079FE57 /* StartCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC182DD35DF20079FE57 /* StartCoordinatorView.swift */; };
+		849CBC1B2DD35E0D0079FE57 /* StartCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC1A2DD35E0C0079FE57 /* StartCoordinatorViewModel.swift */; };
+		849CBC1E2DD35F9D0079FE57 /* ReachabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC1D2DD35F9D0079FE57 /* ReachabilityView.swift */; };
+		849CBC202DD35FBC0079FE57 /* ReachabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC1F2DD35FBC0079FE57 /* ReachabilityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +141,10 @@
 		849CBC112DD32E2F0079FE57 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extesion.swift"; sourceTree = "<group>"; };
+		849CBC182DD35DF20079FE57 /* StartCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinatorView.swift; sourceTree = "<group>"; };
+		849CBC1A2DD35E0C0079FE57 /* StartCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		849CBC1D2DD35F9D0079FE57 /* ReachabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityView.swift; sourceTree = "<group>"; };
+		849CBC1F2DD35FBC0079FE57 /* ReachabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				8469A5CA2DCDE9E60091EED3 /* CoordinatorModel.swift */,
-				8469A5C72DCDE9E60091EED3 /* UserListCoordinator */,
+				849CBC172DD35DBB0079FE57 /* StartCoordinator */,
+				8469A5C72DCDE9E60091EED3 /* TabBarCoordinator */,
 				8469A5C02DCDE9E60091EED3 /* Screen.swift */,
 			);
 			path = Coordinator;
@@ -296,13 +305,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		8469A5C72DCDE9E60091EED3 /* UserListCoordinator */ = {
+		8469A5C72DCDE9E60091EED3 /* TabBarCoordinator */ = {
 			isa = PBXGroup;
 			children = (
 				8469A5C82DCDE9E60091EED3 /* CoordinatorView.swift */,
 				8469A5C92DCDE9E60091EED3 /* CoordinatorViewModel.swift */,
 			);
-			path = UserListCoordinator;
+			path = TabBarCoordinator;
 			sourceTree = "<group>";
 		};
 		8469A5DD2DCDEA730091EED3 /* Onboarding */ = {
@@ -386,8 +395,9 @@
 			isa = PBXGroup;
 			children = (
 				8469A6192DCE2B650091EED3 /* BasicView */,
-				8469A5FB2DCDEF160091EED3 /* Flows */,
 				8469A60F2DCE10300091EED3 /* SplashView */,
+				849CBC1C2DD35F4E0079FE57 /* ReachabilityView */,
+				8469A5FB2DCDEF160091EED3 /* Flows */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -450,6 +460,24 @@
 				849CBC0F2DD32D270079FE57 /* SignUpResultView.swift */,
 			);
 			path = SignUpResultView;
+			sourceTree = "<group>";
+		};
+		849CBC172DD35DBB0079FE57 /* StartCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				849CBC182DD35DF20079FE57 /* StartCoordinatorView.swift */,
+				849CBC1A2DD35E0C0079FE57 /* StartCoordinatorViewModel.swift */,
+			);
+			path = StartCoordinator;
+			sourceTree = "<group>";
+		};
+		849CBC1C2DD35F4E0079FE57 /* ReachabilityView */ = {
+			isa = PBXGroup;
+			children = (
+				849CBC1D2DD35F9D0079FE57 /* ReachabilityView.swift */,
+				849CBC1F2DD35FBC0079FE57 /* ReachabilityViewModel.swift */,
+			);
+			path = ReachabilityView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +570,7 @@
 				8469A5B62DCDE9220091EED3 /* UserListClient.swift in Sources */,
 				8469A5D72DCDE9E60091EED3 /* CoordinatorViewModel.swift in Sources */,
 				8469A61D2DCE2B820091EED3 /* BasicViewModel.swift in Sources */,
+				849CBC202DD35FBC0079FE57 /* ReachabilityViewModel.swift in Sources */,
 				8469A59C2DCDE8480091EED3 /* TabBarModel.swift in Sources */,
 				8469A5B72DCDE9220091EED3 /* APIClient.swift in Sources */,
 				849CBC102DD32D270079FE57 /* SignUpResultView.swift in Sources */,
@@ -568,13 +597,16 @@
 				8469A6502DCEAF630091EED3 /* Positions.swift in Sources */,
 				849CBC162DD353C30079FE57 /* UIApplication+Extesion.swift in Sources */,
 				8469A5B32DCDE9220091EED3 /* CodableService.swift in Sources */,
+				849CBC1E2DD35F9D0079FE57 /* ReachabilityView.swift in Sources */,
 				8469A5FA2DCDEC600091EED3 /* UserList.swift in Sources */,
+				849CBC1B2DD35E0D0079FE57 /* StartCoordinatorViewModel.swift in Sources */,
 				849CBC142DD32E620079FE57 /* CustomButtonStyle.swift in Sources */,
 				8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */,
 				8469A60E2DCE0F0D0091EED3 /* SplashView.swift in Sources */,
 				8478A3E82DD2008200B167DA /* RegisterResult.swift in Sources */,
 				8469A6212DCE2FDF0091EED3 /* SignUpViewModel.swift in Sources */,
 				8469A5BE2DCDE9220091EED3 /* ErrorResponse.swift in Sources */,
+				849CBC192DD35DF20079FE57 /* StartCoordinatorView.swift in Sources */,
 				8469A6092DCE0B940091EED3 /* Links.swift in Sources */,
 				8469A5872DCDE7700091EED3 /* ABZ_Test_TaskApp.swift in Sources */,
 				8478A3E42DD1F77500B167DA /* NSMutableData+Extension.swift in Sources */,

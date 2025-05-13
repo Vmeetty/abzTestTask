@@ -13,7 +13,8 @@ struct ABZ_Test_TaskApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+//            TabBarView()
+            StartCoordinatorView(coordinatorModel: StartCoordinatorViewModel(), startScreen: .start)
         }
     }
 }

@@ -19,6 +19,8 @@ class CoordinatorViewModel: CoordinatorModel {
                 switch event {
                 case .goNext:
                     print("Go Next")
+                default:
+                    break
                 }
             }))
         case .signUp:
@@ -26,8 +28,12 @@ class CoordinatorViewModel: CoordinatorModel {
                 switch event {
                 case .goNext:
                     print("Go Next")
+                default:
+                    break
                 }
             }))
+        default:
+            EmptyView()
         }
     }
     

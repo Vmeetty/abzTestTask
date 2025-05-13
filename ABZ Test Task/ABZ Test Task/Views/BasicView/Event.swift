@@ -9,4 +9,6 @@ import Foundation
 
 enum Event {
     case goNext
+    case goHome
+    case goNoConnection
 }
