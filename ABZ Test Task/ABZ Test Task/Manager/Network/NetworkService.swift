@@ -94,7 +94,7 @@ final class NetworkService {
                                             session: URLSession) -> AnyPublisher<T, Error> {
         logOutput(output: output)
         switch (output.response as? HTTPURLResponse)?.statusCode {
-        case .some(200), .some(201):
+        case .some(200), .some(201), .some(422), .some(409):
             return Just(output.data.isEmpty ? EmptyResponse().data! : output.data)
                 .decode(type: T.self, decoder: CodableService.defaultDecoder)
                 .eraseToAnyPublisher()

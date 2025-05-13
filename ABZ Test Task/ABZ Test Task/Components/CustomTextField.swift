@@ -21,7 +21,6 @@ enum TextFieldType {
 
 struct CustomTextField: View {
     let label: String
-    let supportingText: String
     let validator: (String) -> String?
     @Binding var text: String
     @Binding var isValid: Bool
@@ -70,7 +69,7 @@ struct CustomTextField: View {
                 if !newValue { wasFocused = true }
             }
             
-            Text(errorText ?? supportingText)
+            Text(errorText ?? "")
                 .font(.caption)
                 .foregroundColor(state == .error ? .red : .gray)
         }

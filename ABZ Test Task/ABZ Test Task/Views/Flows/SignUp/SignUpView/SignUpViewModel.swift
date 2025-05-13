@@ -28,6 +28,10 @@ class SignUpViewModel: BasicViewModel {
     @Published var photoSource: PhotoPicker.SourceType = .photoLibrary
     @Published var photoErrorText: String? = nil
     
+    @Published var showResultScreen = false
+    @Published var resultScreenType: SignUpResultScreenType = .none
+    @Published var resultMessage: String = ""
+    
     // MARK: - Properties
     private var subscriptions = Set<AnyCancellable>()
     
@@ -61,7 +65,7 @@ class SignUpViewModel: BasicViewModel {
     }
 
     func validatePhone(_ text: String) -> String? {
-        text.isValidPhone ? nil : "Format: +380 (XX) XXX - XX - XX"
+        text.isValidPhone ? nil : "Format: +38 (XXX) XXX - XX - XX"
     }
     
     func pickPhoto() {
@@ -150,7 +154,7 @@ class SignUpViewModel: BasicViewModel {
             return
         }
         
-        let userData = UserData(name: username, email: email, phone: phone.digitsOnly, position_id: positionId)
+        let userData = UserData(name: username, email: email.lowercased(), phone: phone.digitsOnly, position_id: positionId)
         let uploadData = UploadDataWithFile(userData: userData, imageName: "userPhoto", imageData: imageData)
         
         APIClient.userListClient.registerUser(data: uploadData)
@@ -169,8 +173,61 @@ class SignUpViewModel: BasicViewModel {
                 guard let self else { return }
                 
                 print(data)
+                
+                self.isLoading = false
+                
+                let fails = data.fails
+                
+                if fails != nil {
+                    self.errorText = self.onShowError(fails: fails)
+                    self.showingError = true
+                } else {
+                    self.showResultScreen = true
+                    self.resultScreenType = data.success ? .success : .tryAgain
+                    self.resultMessage = data.message
+                    
+                    self.resetValues()
+                }
             }
             .store(in: &subscriptions)
+    }
+    
+    private func onShowError(fails: Fails?) -> String {
+        var text: String = ""
+        
+        guard let fails = fails else {
+            return text
+        }
+        
+        if let nameFail = fails.name?.first {
+            text = nameFail
+        }
+        
+        if let emailFail = fails.email?.first {
+            text += "\(emailFail) "
+        }
+        
+        if let phoneFail = fails.phone?.first {
+            text += "\(phoneFail) "
+        }
+        
+        if let positionIdFail = fails.position_id?.first {
+            text += "\(positionIdFail) "
+        }
+        
+        if let photoFail = fails.photo?.first {
+            text += "\(photoFail)"
+        }
+        
+        return text
+    }
+    
+    private func resetValues() {
+        username = ""
+        email = ""
+        phone = ""
+        selectedPhoto = nil
+        selectedPosition = nil
     }
     
 }

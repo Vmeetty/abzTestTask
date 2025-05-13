@@ -66,6 +66,10 @@
 		8478A3EB2DD2045400B167DA /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3EA2DD2045400B167DA /* OnboardingRouter.swift */; };
 		8478A3ED2DD2070A00B167DA /* OnboardingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3EC2DD2070A00B167DA /* OnboardingClient.swift */; };
 		8478A3EF2DD2248E00B167DA /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478A3EE2DD2248E00B167DA /* Data+Extension.swift */; };
+		849CBC102DD32D270079FE57 /* SignUpResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC0F2DD32D270079FE57 /* SignUpResultView.swift */; };
+		849CBC122DD32E2F0079FE57 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC112DD32E2F0079FE57 /* CustomButton.swift */; };
+		849CBC142DD32E620079FE57 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */; };
+		849CBC162DD353C30079FE57 /* UIApplication+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +133,10 @@
 		8478A3EA2DD2045400B167DA /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		8478A3EC2DD2070A00B167DA /* OnboardingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingClient.swift; sourceTree = "<group>"; };
 		8478A3EE2DD2248E00B167DA /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		849CBC0F2DD32D270079FE57 /* SignUpResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResultView.swift; sourceTree = "<group>"; };
+		849CBC112DD32E2F0079FE57 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extesion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +321,7 @@
 				8469A5E52DCDEBBC0091EED3 /* String+Extensions.swift */,
 				8478A3E32DD1F77500B167DA /* NSMutableData+Extension.swift */,
 				8478A3EE2DD2248E00B167DA /* Data+Extension.swift */,
+				849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 		8469A6042DCDF3FF0091EED3 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				849CBC0E2DD32D040079FE57 /* SignUpResultView */,
 				8469A6052DCDF40B0091EED3 /* SignUpView */,
 			);
 			path = SignUp;
@@ -401,6 +411,7 @@
 				8469A6512DCEB3140091EED3 /* RadioButtonRow.swift */,
 				8469A6532DCEB4B00091EED3 /* PositionSelectionView.swift */,
 				8478A3DF2DD1EACA00B167DA /* PhotoUploadField.swift */,
+				849CBC112DD32E2F0079FE57 /* CustomButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -419,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */,
+				849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -430,6 +442,14 @@
 				8478A3EC2DD2070A00B167DA /* OnboardingClient.swift */,
 			);
 			path = OnboardingRouter;
+			sourceTree = "<group>";
+		};
+		849CBC0E2DD32D040079FE57 /* SignUpResultView */ = {
+			isa = PBXGroup;
+			children = (
+				849CBC0F2DD32D270079FE57 /* SignUpResultView.swift */,
+			);
+			path = SignUpResultView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +527,7 @@
 				8478A3EF2DD2248E00B167DA /* Data+Extension.swift in Sources */,
 				8469A61B2DCE2B720091EED3 /* BasicView.swift in Sources */,
 				8469A5892DCDE7700091EED3 /* ContentView.swift in Sources */,
+				849CBC122DD32E2F0079FE57 /* CustomButton.swift in Sources */,
 				8469A6182DCE17130091EED3 /* UserListViewModel.swift in Sources */,
 				8469A59D2DCDE8480091EED3 /* CustomTabBar.swift in Sources */,
 				8469A6252DCE418B0091EED3 /* LoadingView.swift in Sources */,
@@ -523,6 +544,7 @@
 				8469A61D2DCE2B820091EED3 /* BasicViewModel.swift in Sources */,
 				8469A59C2DCDE8480091EED3 /* TabBarModel.swift in Sources */,
 				8469A5B72DCDE9220091EED3 /* APIClient.swift in Sources */,
+				849CBC102DD32D270079FE57 /* SignUpResultView.swift in Sources */,
 				8478A3ED2DD2070A00B167DA /* OnboardingClient.swift in Sources */,
 				8469A5D62DCDE9E60091EED3 /* CoordinatorView.swift in Sources */,
 				8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */,
@@ -544,8 +566,10 @@
 				8469A5D12DCDE9E60091EED3 /* Screen.swift in Sources */,
 				8478A3EB2DD2045400B167DA /* OnboardingRouter.swift in Sources */,
 				8469A6502DCEAF630091EED3 /* Positions.swift in Sources */,
+				849CBC162DD353C30079FE57 /* UIApplication+Extesion.swift in Sources */,
 				8469A5B32DCDE9220091EED3 /* CodableService.swift in Sources */,
 				8469A5FA2DCDEC600091EED3 /* UserList.swift in Sources */,
+				849CBC142DD32E620079FE57 /* CustomButtonStyle.swift in Sources */,
 				8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */,
 				8469A60E2DCE0F0D0091EED3 /* SplashView.swift in Sources */,
 				8478A3E82DD2008200B167DA /* RegisterResult.swift in Sources */,

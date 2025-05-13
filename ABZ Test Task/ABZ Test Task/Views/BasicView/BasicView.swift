@@ -14,13 +14,24 @@ struct BasicView<Content: View>: View {
     @ViewBuilder let content: Content
     
     var body: some View {
-        ScrollView {
-            VStack {
-                HeaderView(title: viewModel.title)
-                
-                content
+        ZStack {
+            ScrollView {
+                VStack {
+                    HeaderView(title: viewModel.title)
+                    
+                    content
+                }
+                .padding(.bottom, 70)
             }
-            .padding(.bottom, 70)
+            .alert(isPresented: $viewModel.showingError) {
+                Alert (title: Text("Error"),
+                       message: Text(viewModel.errorText),
+                       dismissButton: .default(Text("Dismiss"), action: {
+                    viewModel.showingError = false
+                }))
+            }
+            
+            LoadingView(isLoading: $viewModel.isLoading)
         }
     }
 }

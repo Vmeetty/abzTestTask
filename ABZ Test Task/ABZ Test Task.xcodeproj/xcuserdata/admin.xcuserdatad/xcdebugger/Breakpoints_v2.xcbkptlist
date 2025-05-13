@@ -7,17 +7,95 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4FC8B90-ADA0-4728-B956-BB2A9A3BD43A"
+            uuid = "291E6902-9CD9-41B5-A98C-356C1D52BA57"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ABZ Test Task/Manager/Network/Clients/Home/Router.swift"
+            filePath = "ABZ Test Task/Views/Flows/SignUp/SignUpView/SignUpViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "registerUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B07BB9F8-3345-4105-A5EC-800DC4C80728"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABZ Test Task/Views/Flows/SignUp/SignUpView/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "registerUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B07BB9F8-3345-4105-A5EC-800DC4C80728 - ab2fe840729caf46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.RegisterResult) -&gt; () in ABZ_Test_Task.SignUpViewModel.registerUser() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/SignUp/SignUpView/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "B07BB9F8-3345-4105-A5EC-800DC4C80728 - ab2fe840729caf46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.RegisterResult) -&gt; () in ABZ_Test_Task.SignUpViewModel.registerUser() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/SignUp/SignUpView/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "B07BB9F8-3345-4105-A5EC-800DC4C80728 - ab2fe840729caf46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.RegisterResult) -&gt; () in ABZ_Test_Task.SignUpViewModel.registerUser() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/SignUp/SignUpView/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "B07BB9F8-3345-4105-A5EC-800DC4C80728 - ab2fe840729caf46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (ABZ_Test_Task.RegisterResult) -&gt; () in ABZ_Test_Task.SignUpViewModel.registerUser() -&gt; ()"
+                  moduleName = "ABZ Test Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/abzTestTask/ABZ%20Test%20Task/ABZ%20Test%20Task/Views/Flows/SignUp/SignUpView/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "636">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
