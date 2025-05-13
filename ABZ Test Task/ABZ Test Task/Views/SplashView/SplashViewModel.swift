@@ -7,6 +7,12 @@
 
 import Foundation
 
-class SplashViewModel: ObservableObject {
+class SplashViewModel: BasicViewModel {
+    
+    func onAppear() {
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            super.action()
+        }
+    }
     
 }

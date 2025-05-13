@@ -18,9 +18,12 @@ struct SplashView: View {
             Image("Logo")
         }
         .navigationBarBackButtonHidden()
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 
 #Preview {
-    SplashView(viewModel: SplashViewModel())
+    SplashView(viewModel: SplashViewModel(title: "", onEvent: { _ in }))
 }
