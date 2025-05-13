@@ -93,11 +93,12 @@ class SignUpViewModel: BasicViewModel {
                     break
                 }
             } receiveValue: { [weak self] data in
-//                guard let self else { return }
-                self?.positions = data.positions
-                self?.isLoading = false
-//                DispatchQueue.main.async {
-//                }
+                guard let self else { return }
+                
+                DispatchQueue.main.async {
+                    self.positions = data.positions
+                    self.isLoading = false
+                }
             }
             .store(in: &subscriptions)
 
@@ -149,8 +150,8 @@ class SignUpViewModel: BasicViewModel {
             return
         }
         
-        let userData = UserData(name: username, email: email, phone: phone, position_id: positionId)
-        let uploadData = UploadDataWithFile(userData: userData, imageName: "userPhoto9090", imageData: imageData)
+        let userData = UserData(name: username, email: email, phone: phone.digitsOnly, position_id: positionId)
+        let uploadData = UploadDataWithFile(userData: userData, imageName: "userPhoto", imageData: imageData)
         
         APIClient.userListClient.registerUser(data: uploadData)
             .sink { [weak self] in

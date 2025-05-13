@@ -31,7 +31,7 @@ struct UploadDataWithFile {
     var multipartBodyWithPhoto: Data {
         appendFormField("name", userData.name)
         appendFormField("email", userData.email)
-        appendFormField("phone", "380500740599")
+        appendFormField("phone", userData.phone)
         appendFormField("position_id", "\(userData.position_id)")
         body.append(string: "--\(boundary)\r\n")
         body.append(string: "Content-Disposition: form-data; name=\"photo\"; filename=\"\(imageName+".jpeg")\"\r\n")

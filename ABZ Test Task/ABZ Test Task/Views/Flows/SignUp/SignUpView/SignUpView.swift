@@ -27,7 +27,8 @@ struct SignUpView: View {
                     supportingText: "Enter your email",
                     validator: viewModel.validateEmail(_:),
                     text: $viewModel.email,
-                    isValid: $viewModel.isEmailValid
+                    isValid: $viewModel.isEmailValid,
+                    type: .email
                 )
                 
                 CustomTextField(
@@ -35,10 +36,12 @@ struct SignUpView: View {
                     supportingText: "Format: +380 (XX) XXX - XX - XX",
                     validator: viewModel.validatePhone(_:),
                     text: $viewModel.phone,
-                    isValid: $viewModel.isPhoneValid
+                    isValid: $viewModel.isPhoneValid,
+                    type: .phone
                 )
             }
             .padding(.horizontal)
+            .padding(.top)
             
             VStack(alignment: .leading) {
                 PositionSelectionView(selectedPosition: $viewModel.selectedPosition, positions: viewModel.positions)
