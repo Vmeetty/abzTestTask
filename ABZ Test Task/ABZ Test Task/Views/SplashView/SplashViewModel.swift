@@ -8,17 +8,17 @@
 import Foundation
 
 class SplashViewModel: BasicViewModel {
-    var reachability: Bool = false
+ 
+    func goNoConnection() {
+        self.event = .goNoConnection
+        super.action()
+    }
     
-    func onAppear() {
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-            if !self.reachability {
-                self.event = .goNoConnection
-            } else {
-                self.event = .goHome
-            }
-            super.action()
-        }
+    func goHome() {
+        self.event = .goHome
+        super.action()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//        }
     }
     
 }

@@ -33,5 +33,6 @@ struct BasicView<Content: View>: View {
             
             LoadingView(isLoading: $viewModel.isLoading)
         }
+        .background(Color(.white))
     }
 }

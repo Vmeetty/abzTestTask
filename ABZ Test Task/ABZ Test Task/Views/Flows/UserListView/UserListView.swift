@@ -22,12 +22,6 @@ struct UserListView: View {
                             }
                         }
                 }
-                
-                if viewModel.isLoading {
-                    ProgressView()
-                        .padding(.top, 8)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                }
             }
         }
         .onAppear {

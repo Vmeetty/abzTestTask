@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
+//    @StateObject private var networkMonitor = NetworkMonitor()
     @ObservedObject var viewModel: SplashViewModel
     
     var body: some View {
@@ -15,12 +16,24 @@ struct SplashView: View {
             Rectangle()
                 .foregroundStyle(Color("PrimaryColor"))
                 .ignoresSafeArea()
-            Image("Logo")
+            VStack {
+                Image("Logo")
+                Button("go") {
+                    viewModel.goHome()
+                }
+            }
         }
-        .navigationBarBackButtonHidden()
-        .onAppear {
-            viewModel.onAppear()
-        }
+//        .navigationBarBackButtonHidden()
+//        .onAppear {
+//            viewModel.goHome()
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//                if networkMonitor.isConnected {
+//                    viewModel.goHome()
+//                } else {
+//                    viewModel.goNoConnection()
+//                }
+//            }
+//        }
     }
 }
 

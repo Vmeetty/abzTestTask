@@ -26,7 +26,7 @@ class StartCoordinatorViewModel: CoordinatorModel {
                 }
             }))
         case .reachability:
-            ReachabilityView(viewModel: ReachabilityViewModel(title: "", onEvent: { event in
+            ReachabilityView(viewModel: ReachabilityViewModel(onEvent: { event in
                 switch event {
                 case .goNext:
                     self.push(.home)
