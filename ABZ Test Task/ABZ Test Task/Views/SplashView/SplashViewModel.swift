@@ -17,8 +17,6 @@ class SplashViewModel: BasicViewModel {
     func goHome() {
         self.event = .goHome
         super.action()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//        }
     }
     
 }

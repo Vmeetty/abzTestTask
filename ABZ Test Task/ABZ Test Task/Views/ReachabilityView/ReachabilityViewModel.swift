@@ -19,8 +19,6 @@ class ReachabilityViewModel: BasicViewModel {
         
     }
     
-
-    
     func goNext() {
         super.action()
     }

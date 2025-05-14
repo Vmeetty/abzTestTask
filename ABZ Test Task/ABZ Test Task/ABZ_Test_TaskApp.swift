@@ -10,13 +10,12 @@ import SwiftUI
 @main
 struct ABZ_Test_TaskApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-//    @StateObject private var networkMonitor = NetworkMonitor()
-    
-    var body: some Scene {
-        WindowGroup {
-            StartCoordinatorView(coordinatorModel: StartCoordinatorViewModel(), startScreen: .start)
-                .preferredColorScheme(.light)
-//                .environmentObject(networkMonitor)
+    @StateObject private var coordinator = AppCoordinator()
+
+        var body: some Scene {
+            WindowGroup {
+                RootView()
+                    .environmentObject(coordinator)
+            }
         }
-    }
 }

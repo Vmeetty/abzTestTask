@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842F55742DD4ED1800BFDD4D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */; };
+		842F55762DD4ED5600BFDD4D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55752DD4ED5600BFDD4D /* RootView.swift */; };
+		842F55782DD4F6F500BFDD4D /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */; };
 		8469A5872DCDE7700091EED3 /* ABZ_Test_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5862DCDE7700091EED3 /* ABZ_Test_TaskApp.swift */; };
 		8469A5892DCDE7700091EED3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5882DCDE7700091EED3 /* ContentView.swift */; };
 		8469A58B2DCDE7710091EED3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8469A58A2DCDE7710091EED3 /* Colors.xcassets */; };
@@ -29,8 +32,8 @@
 		8469A5BE2DCDE9220091EED3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5B02DCDE9220091EED3 /* ErrorResponse.swift */; };
 		8469A5BF2DCDE9220091EED3 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5B22DCDE9220091EED3 /* Log.swift */; };
 		8469A5D12DCDE9E60091EED3 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5C02DCDE9E60091EED3 /* Screen.swift */; };
-		8469A5D62DCDE9E60091EED3 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5C82DCDE9E60091EED3 /* CoordinatorView.swift */; };
-		8469A5D72DCDE9E60091EED3 /* CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5C92DCDE9E60091EED3 /* CoordinatorViewModel.swift */; };
+		8469A5D62DCDE9E60091EED3 /* TabBarCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5C82DCDE9E60091EED3 /* TabBarCoordinatorView.swift */; };
+		8469A5D72DCDE9E60091EED3 /* TabBarCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5C92DCDE9E60091EED3 /* TabBarCoordinatorViewModel.swift */; };
 		8469A5D82DCDE9E60091EED3 /* CoordinatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5CA2DCDE9E60091EED3 /* CoordinatorModel.swift */; };
 		8469A5DF2DCDEA730091EED3 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5DE2DCDEA730091EED3 /* Authorization.swift */; };
 		8469A5E22DCDEAB60091EED3 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5E12DCDEAB60091EED3 /* UserDefaults+Extension.swift */; };
@@ -70,13 +73,14 @@
 		849CBC122DD32E2F0079FE57 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC112DD32E2F0079FE57 /* CustomButton.swift */; };
 		849CBC142DD32E620079FE57 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */; };
 		849CBC162DD353C30079FE57 /* UIApplication+Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */; };
-		849CBC192DD35DF20079FE57 /* StartCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC182DD35DF20079FE57 /* StartCoordinatorView.swift */; };
-		849CBC1B2DD35E0D0079FE57 /* StartCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC1A2DD35E0C0079FE57 /* StartCoordinatorViewModel.swift */; };
 		849CBC1E2DD35F9D0079FE57 /* ReachabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC1D2DD35F9D0079FE57 /* ReachabilityView.swift */; };
 		849CBC202DD35FBC0079FE57 /* ReachabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CBC1F2DD35FBC0079FE57 /* ReachabilityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		842F55752DD4ED5600BFDD4D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		8469A5832DCDE7700091EED3 /* ABZ Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABZ Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8469A5862DCDE7700091EED3 /* ABZ_Test_TaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABZ_Test_TaskApp.swift; sourceTree = "<group>"; };
 		8469A5882DCDE7700091EED3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,8 +104,8 @@
 		8469A5B02DCDE9220091EED3 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		8469A5B22DCDE9220091EED3 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		8469A5C02DCDE9E60091EED3 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		8469A5C82DCDE9E60091EED3 /* CoordinatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
-		8469A5C92DCDE9E60091EED3 /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
+		8469A5C82DCDE9E60091EED3 /* TabBarCoordinatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorView.swift; sourceTree = "<group>"; };
+		8469A5C92DCDE9E60091EED3 /* TabBarCoordinatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorViewModel.swift; sourceTree = "<group>"; };
 		8469A5CA2DCDE9E60091EED3 /* CoordinatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorModel.swift; sourceTree = "<group>"; };
 		8469A5DE2DCDEA730091EED3 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		8469A5E12DCDEAB60091EED3 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
@@ -141,8 +145,6 @@
 		849CBC112DD32E2F0079FE57 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extesion.swift"; sourceTree = "<group>"; };
-		849CBC182DD35DF20079FE57 /* StartCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinatorView.swift; sourceTree = "<group>"; };
-		849CBC1A2DD35E0C0079FE57 /* StartCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinatorViewModel.swift; sourceTree = "<group>"; };
 		849CBC1D2DD35F9D0079FE57 /* ReachabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityView.swift; sourceTree = "<group>"; };
 		849CBC1F2DD35FBC0079FE57 /* ReachabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +209,7 @@
 			children = (
 				8469A5962DCDE8000091EED3 /* TabBar */,
 				8469A5952DCDE7F90091EED3 /* Coordinator */,
+				842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -215,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				8469A5CA2DCDE9E60091EED3 /* CoordinatorModel.swift */,
-				849CBC172DD35DBB0079FE57 /* StartCoordinator */,
 				8469A5C72DCDE9E60091EED3 /* TabBarCoordinator */,
 				8469A5C02DCDE9E60091EED3 /* Screen.swift */,
 			);
@@ -238,6 +240,7 @@
 			children = (
 				8469A5A12DCDE89B0091EED3 /* Network */,
 				8469A5A02DCDE88D0091EED3 /* Models */,
+				842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -308,8 +311,8 @@
 		8469A5C72DCDE9E60091EED3 /* TabBarCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				8469A5C82DCDE9E60091EED3 /* CoordinatorView.swift */,
-				8469A5C92DCDE9E60091EED3 /* CoordinatorViewModel.swift */,
+				8469A5C82DCDE9E60091EED3 /* TabBarCoordinatorView.swift */,
+				8469A5C92DCDE9E60091EED3 /* TabBarCoordinatorViewModel.swift */,
 			);
 			path = TabBarCoordinator;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				8469A60F2DCE10300091EED3 /* SplashView */,
 				849CBC1C2DD35F4E0079FE57 /* ReachabilityView */,
 				8469A5FB2DCDEF160091EED3 /* Flows */,
+				842F55752DD4ED5600BFDD4D /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -460,15 +464,6 @@
 				849CBC0F2DD32D270079FE57 /* SignUpResultView.swift */,
 			);
 			path = SignUpResultView;
-			sourceTree = "<group>";
-		};
-		849CBC172DD35DBB0079FE57 /* StartCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				849CBC182DD35DF20079FE57 /* StartCoordinatorView.swift */,
-				849CBC1A2DD35E0C0079FE57 /* StartCoordinatorViewModel.swift */,
-			);
-			path = StartCoordinator;
 			sourceTree = "<group>";
 		};
 		849CBC1C2DD35F4E0079FE57 /* ReachabilityView */ = {
@@ -553,6 +548,7 @@
 			files = (
 				8469A6232DCE35680091EED3 /* Router.swift in Sources */,
 				8478A3EF2DD2248E00B167DA /* Data+Extension.swift in Sources */,
+				842F55742DD4ED1800BFDD4D /* AppCoordinator.swift in Sources */,
 				8469A61B2DCE2B720091EED3 /* BasicView.swift in Sources */,
 				8469A5892DCDE7700091EED3 /* ContentView.swift in Sources */,
 				849CBC122DD32E2F0079FE57 /* CustomButton.swift in Sources */,
@@ -568,22 +564,24 @@
 				8469A5BB2DCDE9220091EED3 /* APIErrorCode.swift in Sources */,
 				8469A5D82DCDE9E60091EED3 /* CoordinatorModel.swift in Sources */,
 				8469A5B62DCDE9220091EED3 /* UserListClient.swift in Sources */,
-				8469A5D72DCDE9E60091EED3 /* CoordinatorViewModel.swift in Sources */,
+				8469A5D72DCDE9E60091EED3 /* TabBarCoordinatorViewModel.swift in Sources */,
 				8469A61D2DCE2B820091EED3 /* BasicViewModel.swift in Sources */,
 				849CBC202DD35FBC0079FE57 /* ReachabilityViewModel.swift in Sources */,
 				8469A59C2DCDE8480091EED3 /* TabBarModel.swift in Sources */,
 				8469A5B72DCDE9220091EED3 /* APIClient.swift in Sources */,
 				849CBC102DD32D270079FE57 /* SignUpResultView.swift in Sources */,
 				8478A3ED2DD2070A00B167DA /* OnboardingClient.swift in Sources */,
-				8469A5D62DCDE9E60091EED3 /* CoordinatorView.swift in Sources */,
+				8469A5D62DCDE9E60091EED3 /* TabBarCoordinatorView.swift in Sources */,
 				8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */,
 				8469A5B82DCDE9220091EED3 /* SecureStorage.swift in Sources */,
 				8469A5E62DCDEBBC0091EED3 /* String+Extensions.swift in Sources */,
 				8469A6292DCE44310091EED3 /* UserItemRow.swift in Sources */,
 				8469A5B52DCDE9220091EED3 /* TokenProvider.swift in Sources */,
 				8469A5BD2DCDE9220091EED3 /* BaseRouter.swift in Sources */,
+				842F55762DD4ED5600BFDD4D /* RootView.swift in Sources */,
 				8478A3E62DD1FC3900B167DA /* UserData.swift in Sources */,
 				8469A6072DCDF41B0091EED3 /* SignUpView.swift in Sources */,
+				842F55782DD4F6F500BFDD4D /* ReachabilityService.swift in Sources */,
 				8469A5B92DCDE9220091EED3 /* EmptyResponse.swift in Sources */,
 				8469A59B2DCDE8480091EED3 /* TabBarViewModel.swift in Sources */,
 				8469A6522DCEB3140091EED3 /* RadioButtonRow.swift in Sources */,
@@ -599,14 +597,12 @@
 				8469A5B32DCDE9220091EED3 /* CodableService.swift in Sources */,
 				849CBC1E2DD35F9D0079FE57 /* ReachabilityView.swift in Sources */,
 				8469A5FA2DCDEC600091EED3 /* UserList.swift in Sources */,
-				849CBC1B2DD35E0D0079FE57 /* StartCoordinatorViewModel.swift in Sources */,
 				849CBC142DD32E620079FE57 /* CustomButtonStyle.swift in Sources */,
 				8469A65D2DD1E5280091EED3 /* PhotoPicker.swift in Sources */,
 				8469A60E2DCE0F0D0091EED3 /* SplashView.swift in Sources */,
 				8478A3E82DD2008200B167DA /* RegisterResult.swift in Sources */,
 				8469A6212DCE2FDF0091EED3 /* SignUpViewModel.swift in Sources */,
 				8469A5BE2DCDE9220091EED3 /* ErrorResponse.swift in Sources */,
-				849CBC192DD35DF20079FE57 /* StartCoordinatorView.swift in Sources */,
 				8469A6092DCE0B940091EED3 /* Links.swift in Sources */,
 				8469A5872DCDE7700091EED3 /* ABZ_Test_TaskApp.swift in Sources */,
 				8478A3E42DD1F77500B167DA /* NSMutableData+Extension.swift in Sources */,

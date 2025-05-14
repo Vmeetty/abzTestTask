@@ -1,5 +1,5 @@
 //
-//  CoordinatorViewModel.swift
+//  TabBarCoordinatorViewModel.swift
 //  ABZ Test Task
 //
 //  Created by Vlad Chuvashov on 1/20/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class CoordinatorViewModel: CoordinatorModel {
+class TabBarCoordinatorViewModel: CoordinatorModel {
     
     override init() {}
     
