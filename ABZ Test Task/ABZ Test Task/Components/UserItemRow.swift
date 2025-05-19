@@ -33,17 +33,18 @@ struct UserItemRow: View {
             VStack(alignment: .leading) {
                 Text(user.name)
                     .font(.title3)
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.leading)
                 
                 Text(user.position)
                     .font(.headline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color("StrongGrayColor"))
                     .padding(.top, 4)
                 
                 if let email = user.email {
                     Text(email)
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(Color("StrongGrayColor"))
                         .lineLimit(1)
                         .truncationMode(.tail)
                         .padding(.top, 1)
@@ -52,7 +53,7 @@ struct UserItemRow: View {
                 if let phone = user.phone {
                     Text(phone)
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(Color("StrongGrayColor"))
                         .padding(.top, 1)
                 }
             }

@@ -10,6 +10,7 @@
 		842F55742DD4ED1800BFDD4D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */; };
 		842F55762DD4ED5600BFDD4D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55752DD4ED5600BFDD4D /* RootView.swift */; };
 		842F55782DD4F6F500BFDD4D /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */; };
+		843D74C52DDB3E8A005800EF /* UIKitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D74C42DDB3E8A005800EF /* UIKitTextField.swift */; };
 		8469A5872DCDE7700091EED3 /* ABZ_Test_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5862DCDE7700091EED3 /* ABZ_Test_TaskApp.swift */; };
 		8469A5892DCDE7700091EED3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A5882DCDE7700091EED3 /* ContentView.swift */; };
 		8469A58B2DCDE7710091EED3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8469A58A2DCDE7710091EED3 /* Colors.xcassets */; };
@@ -81,6 +82,7 @@
 		842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		842F55752DD4ED5600BFDD4D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		843D74C42DDB3E8A005800EF /* UIKitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTextField.swift; sourceTree = "<group>"; };
 		8469A5832DCDE7700091EED3 /* ABZ Test Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABZ Test Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8469A5862DCDE7700091EED3 /* ABZ_Test_TaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABZ_Test_TaskApp.swift; sourceTree = "<group>"; };
 		8469A5882DCDE7700091EED3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 			children = (
 				8469A65C2DD1E5280091EED3 /* PhotoPicker.swift */,
 				849CBC132DD32E620079FE57 /* CustomButtonStyle.swift */,
+				843D74C42DDB3E8A005800EF /* UIKitTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				8469A59C2DCDE8480091EED3 /* TabBarModel.swift in Sources */,
 				8469A5B72DCDE9220091EED3 /* APIClient.swift in Sources */,
 				849CBC102DD32D270079FE57 /* SignUpResultView.swift in Sources */,
+				843D74C52DDB3E8A005800EF /* UIKitTextField.swift in Sources */,
 				8478A3ED2DD2070A00B167DA /* OnboardingClient.swift in Sources */,
 				8469A5D62DCDE9E60091EED3 /* TabBarCoordinatorView.swift in Sources */,
 				8469A6542DCEB4B00091EED3 /* PositionSelectionView.swift in Sources */,

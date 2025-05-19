@@ -17,6 +17,7 @@ struct HeaderView: View {
                 .frame(height: 60)
                 .foregroundStyle(Color("PrimaryColor"))
             Text(title)
+                .foregroundStyle(.black)
         }
     }
 }

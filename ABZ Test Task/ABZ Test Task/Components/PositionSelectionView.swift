@@ -16,6 +16,7 @@ struct PositionSelectionView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Select your position")
                 .font(.headline)
+                .foregroundStyle(.black)
 
             ForEach(positions) { position in
                 RadioButtonRow(

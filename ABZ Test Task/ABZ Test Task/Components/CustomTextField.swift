@@ -47,28 +47,27 @@ struct CustomTextField: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            TextField(label, text: Binding(
-                get: { text },
-                set: { newValue in
-                    if type == .phone {
-                        text = formatPhoneNumber(newValue)
-                    } else {
-                        text = newValue
+            UIKitTextField(
+                text: Binding(
+                    get: { text },
+                    set: { newValue in
+                        text = (type == .phone) ? formatPhoneInput(newValue) : newValue
                     }
-                }
-            ))
-            .keyboardType(keyboardType(for: type))
-            .textContentType(textContentType(for: type))
-            .padding()
+                ),
+                placeholder: label,
+                keyboardType: keyboardType(for: type),
+                isSecure: false
+            )
+            .frame(height: 44)
+            .padding(.horizontal, 8)
             .background(
                 RoundedRectangle(cornerRadius: 6)
                     .strokeBorder(borderColor(for: state), lineWidth: 1)
             )
-            .focused($isFocused)
-            .onChange(of: isFocused) { oldValue, newValue in
-                if !newValue { wasFocused = true }
+            .onTapGesture {
+                isFocused = true
             }
-            
+
             Text(errorText ?? "")
                 .font(.caption)
                 .foregroundColor(state == .error ? .red : .gray)
@@ -82,7 +81,7 @@ struct CustomTextField: View {
         case .error: return .red
         }
     }
-    
+
     private func keyboardType(for type: TextFieldType) -> UIKeyboardType {
         switch type {
         case .email: return .emailAddress
@@ -90,42 +89,43 @@ struct CustomTextField: View {
         case .name: return .default
         }
     }
-    
-    private func textContentType(for type: TextFieldType) -> UITextContentType? {
-        switch type {
-        case .email: return .emailAddress
-        case .phone: return .telephoneNumber
-        case .name: return .name
-        }
-    }
-    
-    private func formatPhoneNumber(_ input: String) -> String {
+
+    private func formatPhoneInput(_ input: String) -> String {
         let digits = input.filter(\.isWholeNumber)
-        let limited = String(digits.prefix(12))
-        var result = "+"
-        var index = limited.startIndex
-
-        func next(_ count: Int) -> String {
-            guard index < limited.endIndex else { return "" }
-            let end = limited.index(index, offsetBy: count, limitedBy: limited.endIndex) ?? limited.endIndex
-            let slice = limited[index..<end]
-            index = end
-            return String(slice)
+        var result = "+38"
+        var index = digits.index(digits.startIndex, offsetBy: 2, limitedBy: digits.endIndex) ?? digits.endIndex
+        if index > digits.startIndex {
+            result = "+" + digits.prefix(2)
         }
 
-        let country = next(2)
-        let area = next(3)
-        let prefix = next(3)
-        let suffix1 = next(2)
-        let suffix2 = next(2)
+        let remaining = digits.suffix(from: index)
+        var formatted = ""
 
-        if !country.isEmpty { result += country }
-        if !area.isEmpty { result += " (\(area))" }
-        if !prefix.isEmpty { result += " \(prefix)" }
-        if !suffix1.isEmpty { result += " - \(suffix1)" }
-        if !suffix2.isEmpty { result += " - \(suffix2)" }
+        if remaining.count > 0 { formatted += " (" }
+        if remaining.count >= 3 {
+            formatted += remaining.prefix(3) + ") "
+        } else {
+            formatted += remaining
+            return result + formatted
+        }
 
-        return result
+        if remaining.count >= 6 {
+            formatted += remaining.dropFirst(3).prefix(3) + " - "
+        } else {
+            formatted += remaining.dropFirst(3)
+            return result + formatted
+        }
+
+        if remaining.count >= 8 {
+            formatted += remaining.dropFirst(6).prefix(2) + " - "
+        } else {
+            formatted += remaining.dropFirst(6)
+            return result + formatted
+        }
+
+        formatted += remaining.dropFirst(8).prefix(2)
+
+        return result + formatted
     }
 }
 

@@ -20,7 +20,7 @@ struct RadioButtonRow: View {
                     .font(.system(size: 20))
 
                 Text(title)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.black)
 
                 Spacer()
             }
