@@ -11,8 +11,8 @@ import Combine
 class SignUpViewModel: BasicViewModel {
     
     // MARK: - Wrapped Properties
-    @Published var positions: Positions = []
-    @Published var selectedPosition: Position? = nil
+    @Published var positions: Positions?
+    @Published var selectedPosition: Position?
     
     @Published var username = ""
     @Published var email = ""

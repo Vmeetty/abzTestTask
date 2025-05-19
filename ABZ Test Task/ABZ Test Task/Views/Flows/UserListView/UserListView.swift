@@ -26,7 +26,7 @@ struct UserListView: View {
         }
         .onAppear {
             if viewModel.users.isEmpty {
-                viewModel.fetchUsers()
+                viewModel.fetchUsers(isInitial: true)
             }
         }
     }

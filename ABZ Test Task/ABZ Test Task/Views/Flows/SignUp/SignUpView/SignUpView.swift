@@ -42,7 +42,9 @@ struct SignUpView: View {
                 .padding(.horizontal)
                 
                 VStack(alignment: .leading) {
-                    PositionSelectionView(selectedPosition: $viewModel.selectedPosition, positions: viewModel.positions)
+                    if let positions = viewModel.positions {
+                        PositionSelectionView(selectedPosition: $viewModel.selectedPosition, positions: positions)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
@@ -72,7 +74,9 @@ struct SignUpView: View {
                 .padding(.vertical)
             }
             .onAppear {
-                viewModel.onAppear()
+                Task {
+                    viewModel.onAppear()
+                }
             }
             .confirmationDialog("Choose how you want to add a photo", isPresented: $viewModel.showPhotoSourceSheet, titleVisibility: .visible) {
                 Button("Camera") {

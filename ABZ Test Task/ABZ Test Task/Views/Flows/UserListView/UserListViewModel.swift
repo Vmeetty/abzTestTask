@@ -16,9 +16,13 @@ class UserListViewModel: BasicViewModel {
     private var page = "1"
     private var canLoadMore = true
     private var isLoadingPage = false
+    private var didInitialLoad = false
 
-    func fetchUsers() {
+    func fetchUsers(isInitial: Bool = false) {
         guard !isLoadingPage, canLoadMore else { return }
+        if isInitial && didInitialLoad { return }
+        if isInitial { didInitialLoad = true }
+        
         isLoadingPage = true
         getUserList()
     }
