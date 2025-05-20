@@ -19,7 +19,7 @@ struct LoadingView: View {
                 .frame(width: 16, height: 16)
                 .ignoresSafeArea()
                 .scaleEffect(scaleEffect)
-                .tint(.primary)
+                .tint(Color("StrongGrayColor"))
                 .progressViewStyle(.circular)
         }
     }

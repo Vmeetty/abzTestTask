@@ -15,7 +15,7 @@ class UserListViewModel: BasicViewModel {
     private var subscriptions = Set<AnyCancellable>()
     private var page = "1"
     private var canLoadMore = true
-    private var isLoadingPage = false
+    var isLoadingPage = false
     private var didInitialLoad = false
 
     func fetchUsers(isInitial: Bool = false) {
@@ -42,9 +42,8 @@ class UserListViewModel: BasicViewModel {
                 }
             } receiveValue: { [weak self] data in
                 guard let self else { return }
-
+                self.isLoadingPage = false
                 self.users.append(contentsOf: data.users)
-
                 if let nextUrl = data.links.nextUrl,
                    let nextPage = getPageValue(from: nextUrl) {
                     self.page = nextPage
