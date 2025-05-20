@@ -99,6 +99,7 @@ struct SignUpView: View {
         .onTapGesture {
             UIApplication.shared.endEditing()
         }
+        .hideKeyboardOnTap()
     }
 }
 

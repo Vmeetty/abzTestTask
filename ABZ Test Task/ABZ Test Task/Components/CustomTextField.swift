@@ -47,27 +47,28 @@ struct CustomTextField: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            UIKitTextField(
-                text: Binding(
-                    get: { text },
-                    set: { newValue in
-                        text = (type == .phone) ? formatPhoneInput(newValue) : newValue
+            TextField(label, text: Binding(
+                get: { text },
+                set: { newValue in
+                    if type == .phone {
+                        text = formatPhoneInput(newValue)
+                    } else {
+                        text = newValue
                     }
-                ),
-                placeholder: label,
-                keyboardType: keyboardType(for: type),
-                isSecure: false
-            )
-            .frame(height: 44)
-            .padding(.horizontal, 8)
+                }
+            ))
+            .keyboardType(keyboardType(for: type))
+            .textContentType(textContentType(for: type))
+            .padding()
             .background(
                 RoundedRectangle(cornerRadius: 6)
                     .strokeBorder(borderColor(for: state), lineWidth: 1)
             )
-            .onTapGesture {
-                isFocused = true
+            .focused($isFocused)
+            .onChange(of: isFocused) { oldValue, newValue in
+                if !newValue { wasFocused = true }
             }
-
+            
             Text(errorText ?? "")
                 .font(.caption)
                 .foregroundColor(state == .error ? .red : .gray)
@@ -81,12 +82,20 @@ struct CustomTextField: View {
         case .error: return .red
         }
     }
-
+    
     private func keyboardType(for type: TextFieldType) -> UIKeyboardType {
         switch type {
         case .email: return .emailAddress
         case .phone: return .numberPad
         case .name: return .default
+        }
+    }
+    
+    private func textContentType(for type: TextFieldType) -> UITextContentType? {
+        switch type {
+        case .email: return .emailAddress
+        case .phone: return .telephoneNumber
+        case .name: return .name
         }
     }
 

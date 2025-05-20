@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84208D3A2DDC7A9F009AC81F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84208D392DDC7A9F009AC81F /* View+Extension.swift */; };
 		842F55742DD4ED1800BFDD4D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */; };
 		842F55762DD4ED5600BFDD4D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55752DD4ED5600BFDD4D /* RootView.swift */; };
 		842F55782DD4F6F500BFDD4D /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84208D392DDC7A9F009AC81F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		842F55732DD4ED1800BFDD4D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		842F55752DD4ED5600BFDD4D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		842F55772DD4F6F500BFDD4D /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				8478A3E32DD1F77500B167DA /* NSMutableData+Extension.swift */,
 				8478A3EE2DD2248E00B167DA /* Data+Extension.swift */,
 				849CBC152DD353C30079FE57 /* UIApplication+Extesion.swift */,
+				84208D392DDC7A9F009AC81F /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				8478A3E42DD1F77500B167DA /* NSMutableData+Extension.swift in Sources */,
 				8469A6472DCEA4290091EED3 /* CustomTextField.swift in Sources */,
 				8469A5BA2DCDE9220091EED3 /* APIError.swift in Sources */,
+				84208D3A2DDC7A9F009AC81F /* View+Extension.swift in Sources */,
 				8469A5DF2DCDEA730091EED3 /* Authorization.swift in Sources */,
 				8469A60B2DCE0CE90091EED3 /* AppDelegate.swift in Sources */,
 				8469A5E42DCDEB3E0091EED3 /* Encodable+Extensions.swift in Sources */,
@@ -751,6 +755,7 @@
 				DEVELOPMENT_TEAM = NYBC469U45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to take photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -780,6 +785,7 @@
 				DEVELOPMENT_TEAM = NYBC469U45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to take photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
